@@ -31,3 +31,23 @@ function BMIImproved(markMass, markHeight, johnMass, johnHeight){
 BMIImproved(78, 1.69, 92, 1.95)
 BMIImproved(95, 1.88, 85, 1.76)
 
+//challenge 3
+function gymnastics(dolphins, koalas) {
+    const average = list => list.reduce((prev, curr) => prev+curr)/list.length
+    let dolphinScores =  average(dolphins)
+    let koalasScores =  average(koalas)
+    if(dolphinScores > 100 && koalasScores > 100) {
+        if(dolphinScores > koalasScores)
+            console.log(`Dolphins Wins!`);
+        else if(dolphinScores < koalasScores)
+            console.log(`Koala Wins!`);
+        else 
+            console.log(`It's a draw!`);
+    } else {
+        (koalasScores < 100) ? console.log(`Dolphin Wins!`) : console.log(`Koala Wins!`)
+    }
+}
+gymnastics([96,108,89], [88,91,110])
+gymnastics([97,112,101], [109,95,123])
+gymnastics([97,112,101], [109,95,106])
+
